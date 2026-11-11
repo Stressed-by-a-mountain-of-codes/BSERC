@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chai and Co.</title>
+  <style>
+    :root { --bg:#fff8f1; --card:#ffffff; --text:#2b2118; --muted:#6b5a4a; --accent:#b45309; --accent-dark:#92400e; --border:#eadfce; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: "Segoe UI", Roboto, Arial, sans-serif; color:var(--text); background:var(--bg); line-height:1.5; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 40px; }
+    .hero { text-align:center; padding: 40px 16px 28px; background: linear-gradient(180deg,#fff1df,#fff8f1); border:1px solid var(--border); border-radius:16px; }
+    h1 { margin:0; font-size: clamp(2rem, 5vw, 3rem); letter-spacing: .5px; }
+    .tagline { margin:10px 0 18px; font-size:1.15rem; color:var(--muted); }
+    .cta { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:12px 18px; border-radius:999px; font-weight:600; }
+    .cta:hover { background:var(--accent-dark); }
+    h2 { font-size:1.25rem; margin:0 0 10px; }
+    .section { margin-top:22px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:14px; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; }
+    ul { margin:0; padding-left:18px; }
+    li { margin:6px 0; font-weight:600; }
+    p { margin:6px 0; }
+    .footer { margin-top:22px; text-align:center; color:var(--muted); font-weight:600; }
+    @media (max-width:480px){ .wrap{padding:16px 12px 28px;} .hero{padding:28px 12px;} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>Chai and Co.</h1>
+      <p class="tagline">Fresh chai and snacks, all day.</p>
+      <p><a class="cta" href="#menu">See today's special</a></p>
+    </header>
+
+    <section class="section card" id="menu">
+      <h2>Menu</h2>
+      <ul>
+        <li>Masala chai ₹ 30</li>
+        <li>Cold coffee ₹ 90</li>
+        <li>Maska pav ₹ 45</li>
+      </ul>
+    </section>
+
+    <div class="section grid">
+      <section class="card">
+        <h2>About us</h2>
+        <p>A small neighbourhood spot for warm chai, quick bites, and friendly conversations.</p>
+      </section>
+      <section class="card">
+        <h2>Visit</h2>
+        <p>Open daily: 8:00 AM – 9:00 PM</p>
+        <p>Near Central Market, Main Road</p>
+      </section>
+    </div>
+
+    <p class="footer">Call: +91 90000 00000</p>
+  </div>
+</body>
+</html>

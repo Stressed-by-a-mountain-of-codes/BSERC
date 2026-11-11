@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f6feb" />
+  <title>Bill Book</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>Bill Book</h1>
+    <div class="tabs">
+      <button class="tab active" data-tab="billing">Billing</button>
+      <button class="tab" data-tab="items">Items</button>
+      <button class="tab" data-tab="history">History</button>
+      <button class="tab" data-tab="shop">Shop</button>
+    </div>
+  </header>
+  <main>
+    <section id="tab-billing" class="panel active">
+      <div class="row wrap">
+        <label class="grow">Select item <select id="billItem"></select></label>
+        <label>Qty <input id="billQty" type="number" min="1" value="1"></label>
+        <button id="addLine" type="button">Add to bill</button>
+      </div>
+      <table class="table" id="linesTable"><thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Disc%</th><th>Tax%</th><th>Total</th><th></th></tr></thead><tbody></tbody></table>
+      <div class="totals card">
+        <div>Subtotal: ₹ <span id="subTotal">0.00</span></div>
+        <div>Discount: ₹ <span id="discTotal">0.00</span></div>
+        <div>Tax: ₹ <span id="taxTotal">0.00</span></div>
+        <div class="grand">Grand Total: ₹ <span id="grandTotal">0.00</span></div>
+      </div>
+      <div class="row wrap actions">
+        <button id="genQr" type="button">Generate UPI QR</button>
+        <button id="shareBill" type="button">Share/Save Bill Image</button>
+        <button id="saveBill" type="button" class="primary">Save Bill</button>
+        <button id="clearBill" type="button" class="secondary">Clear</button>
+      </div>
+      <div class="card qr-area">
+        <div>
+          <h3>UPI QR (exact total)</h3>
+          <div id="qrBox" class="qr-box"></div>
+          <div id="qrMeta" class="meta"></div>
+        </div>
+        <div>
+          <h3>Bill preview</h3>
+          <canvas id="billCanvas" width="720" height="900" class="bill-canvas"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-items" class="panel">
+      <div class="card">
+        <h3>Add / Update Item</h3>
+        <div class="grid">
+          <label>Name <input id="itemName"></label>
+          <label>Price (₹) <input id="itemPrice" type="number" min="0" step="0.01"></label>
+        </div>
+        <button id="saveItem" type="button" class="primary">Save Item</button>
+      </div>
+      <table class="table" id="itemsTable"><thead><tr><th>Name</th><th>Price</th><th></th></tr></thead><tbody></tbody></table>
+    </section>
+
+    <section id="tab-history" class="panel">
+      <div class="card row wrap"><div class="grand">Today's total: ₹ <span id="todayTotal">0.00</span></div><div class="meta" id="todayDate"></div></div>
+      <div id="historyList" class="history"></div>
+    </section>
+
+    <section id="tab-shop" class="panel">
+      <div class="card grid">
+        <label>Shop name <input id="shopName" placeholder="Sharma Stores"></label>
+        <label>UPI ID (VPA) <input id="shopUpi" placeholder="shop@upi"></label>
+        <label>Payee name <input id="shopPayee" placeholder="Sharma Stores"></label>
+        <label>Address/Phone <input id="shopAddr" placeholder="Address or phone"></label>
+        <button id="saveShop" type="button" class="primary">Save Shop Profile</button>
+      </div>
+      <p class="meta">All data stored locally on this device. Works offline in flight mode.</p>
+    </section>
+  </main>
+  <script src="qrcode.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

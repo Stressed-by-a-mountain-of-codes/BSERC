@@ -1,0 +1,15 @@
+body{margin:0;font-family:system-ui,Segoe UI,Arial,sans-serif;width:380px;color:#1b2430;background:#fff}
+header{padding:10px;border-bottom:1px solid #e3e6ee}
+.goblin-row{display:flex;gap:10px;align-items:center}.goblin{font-size:34px}
+h1{margin:0;font-size:16px}.mood{color:#556;font-size:12px}.counts{margin-top:4px;font-size:12px;color:#334}
+.actions{display:flex;gap:6px;padding:8px 10px}.actions button{flex:1}
+button{background:#6d28d9;color:#fff;border:none;padding:7px 10px;border-radius:6px;cursor:pointer;font-size:12px}
+button.secondary{background:#ece8ff;color:#2b1b5a} button.small{padding:3px 7px;font-size:11px}
+h2{margin:8px 10px 4px;font-size:13px}.list{padding:0 10px 10px;max-height:260px;overflow:auto}
+.tab{border:1px solid #e6e8f0;border-radius:6px;padding:6px;margin:6px 0;display:flex;gap:8px;align-items:flex-start}
+.tab .info{flex:1;min-width:0}.title{font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meta{font-size:11px;color:#667}.row{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap}
+.pill{font-size:10px;background:#f1f3f8;border-radius:10px;padding:1px 6px;color:#445}
+.session{border:1px solid #e6e8f0;border-radius:6px;padding:6px;margin:6px 0}
+.toast{position:fixed;left:10px;right:10px;bottom:10px;background:#111;color:#fff;padding:8px;border-radius:6px;font-size:12px;opacity:0;transition:.2s;pointer-events:none}.toast.show{opacity:1}
+.empty{color:#667;font-size:12px}

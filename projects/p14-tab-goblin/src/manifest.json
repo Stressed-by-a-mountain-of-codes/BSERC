@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Goblin",
+  "version": "1.0.0",
+  "description": "Goblin manages your tabs: list by ignored time, sleep, keep, save/restore sessions.",
+  "action": { "default_title": "Tab Goblin", "default_popup": "popup.html" },
+  "permissions": ["tabs", "storage"]
+}

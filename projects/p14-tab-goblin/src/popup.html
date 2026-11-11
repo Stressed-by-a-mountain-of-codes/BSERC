@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tab Goblin</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header>
+    <div class="goblin-row"><div id="goblin" class="goblin">👹</div><div><h1>Tab Goblin</h1><div id="mood" class="mood"></div></div></div>
+    <div class="counts"><span id="count">0 tabs</span> · <span id="asleep">0 asleep</span></div>
+  </header>
+  <section class="actions">
+    <button id="feed">Feed the goblin (sleep ignored)</button>
+    <button id="saveSession" class="secondary">Save session</button>
+  </section>
+  <section>
+    <h2>Tabs (ignored longest first)</h2>
+    <div id="tabs" class="list"></div>
+  </section>
+  <section>
+    <h2>Saved sessions</h2>
+    <div id="sessions" class="list"></div>
+  </section>
+  <div id="toast" class="toast"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

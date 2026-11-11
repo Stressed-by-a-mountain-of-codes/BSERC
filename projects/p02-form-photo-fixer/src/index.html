@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Form Photo Fixer (Offline)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Form Photo Fixer</h1>
+    <p class="sub">Prepare photo & signature for forms — works offline, files stay on your device.</p>
+  </header>
+
+  <main class="grid">
+    <section class="panel">
+      <h2>1. Upload</h2>
+      <label>Photo <input id="photoInput" type="file" accept="image/*" /></label>
+      <label>Signature <input id="sigInput" type="file" accept="image/*" /></label>
+      <div class="row">
+        <button id="loadSample" type="button" class="secondary">Load large sample (test)</button>
+        <span id="photoMeta" class="meta"></span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>2. Preset & crop</h2>
+      <label>Form preset
+        <select id="presetSelect"></select>
+      </label>
+      <div id="presetInfo" class="meta"></div>
+      <div class="crop-wrap">
+        <canvas id="cropCanvas" width="360" height="450"></canvas>
+        <div class="hint">Drag to position. Use slider to zoom. Oval = face guide.</div>
+      </div>
+      <label>Zoom <input id="zoom" type="range" min="0.5" max="3" step="0.01" value="1" /></label>
+      <div class="row">
+        <button id="centerBtn" type="button" class="secondary">Center</button>
+        <button id="fitBtn" type="button" class="secondary">Fit</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>3. Custom preset</h2>
+      <div class="form-grid">
+        <label>Name <input id="customName" type="text" placeholder="My form" /></label>
+        <label>Width (px) <input id="customW" type="number" min="1" value="350" /></label>
+        <label>Height (px) <input id="customH" type="number" min="1" value="450" /></label>
+        <label>Max KB <input id="customKB" type="number" min="1" value="50" /></label>
+      </div>
+      <button id="addPreset" type="button">Save custom preset</button>
+      <div id="customMsg" class="meta"></div>
+    </section>
+
+    <section class="panel">
+      <h2>4. Output</h2>
+      <div class="preview-row">
+        <div>
+          <div class="label">Photo preview</div>
+          <canvas id="photoOut" class="out"></canvas>
+          <div id="photoOutMeta" class="meta"></div>
+          <button id="downloadPhoto" type="button">Download photo</button>
+        </div>
+        <div>
+          <div class="label">Signature preview</div>
+          <canvas id="sigOut" class="out sig"></canvas>
+          <div id="sigOutMeta" class="meta"></div>
+          <button id="downloadSig" type="button">Download signature</button>
+        </div>
+      </div>
+      <div class="row"><button id="refreshOut" type="button" class="secondary">Refresh outputs</button></div>
+      <p class="meta">Compression targets just under the preset KB limit (JPEG). Signature exported separately (PNG, trimmed to fit).</p>
+    </section>
+  </main>
+
+  <footer class="meta">Offline-only. No uploads. Verify results against official form notices in project docs.</footer>
+  <script src="app.js"></script>
+</body>
+</html>

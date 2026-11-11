@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Style Spy</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Style Spy</h1>
+    <div class="row">
+      <button id="analyze">Analyze page</button>
+      <button id="copyCss" class="secondary">Copy CSS vars</button>
+    </div>
+  </header>
+  <section>
+    <h2>Colors <span class="hint">(ranked by usage)</span></h2>
+    <div id="colors" class="list"></div>
+  </section>
+  <section>
+    <h2>Fonts</h2>
+    <div id="fonts" class="list"></div>
+  </section>
+  <section>
+    <h2>Kits</h2>
+    <div class="row">
+      <input id="kitName" placeholder="Kit name" />
+      <button id="saveKit">Save kit</button>
+    </div>
+    <div id="kits" class="kits"></div>
+  </section>
+  <div id="toast" class="toast"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

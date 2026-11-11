@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Style Spy",
+  "version": "1.0.0",
+  "description": "Grab page colors and fonts, save kits, export as CSS variables. Local only.",
+  "action": { "default_title": "Style Spy", "default_popup": "popup.html" },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"]
+}

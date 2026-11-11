@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume Builder (Offline)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header no-print">
+    <div>
+      <h1>Resume Builder</h1>
+      <p class="sub">Live A4 preview · offline · data stays on your device</p>
+    </div>
+    <div class="actions">
+      <label class="file-btn">Load JSON<input id="loadJson" type="file" accept="application/json" hidden></label>
+      <button id="saveJson" type="button" class="secondary">Save JSON</button>
+      <button id="exportPdf" type="button">Export PDF</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="editor no-print">
+      <div class="card">
+        <h2>Template & Sections</h2>
+        <label>Template
+          <select id="templateSelect">
+            <option value="classic">Classic (serif, centered header)</option>
+            <option value="modern">Modern (sidebar accent)</option>
+            <option value="minimal">Minimal (clean lines, compact)</option>
+          </select>
+        </label>
+        <p class="hint">Drag section blocks below to reorder. Toggle to include/exclude.</p>
+        <ul id="sectionOrder" class="order-list"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Personal</h2>
+        <div class="grid2">
+          <label>Full name <input id="name" type="text" placeholder="Riya Sharma"></label>
+          <label>Title/Role <input id="title" type="text" placeholder="Software Intern"></label>
+          <label>Email <input id="email" type="text" placeholder="riya@example.com"></label>
+          <label>Phone <input id="phone" type="text" placeholder="+91 90000 00000"></label>
+          <label>Location <input id="location" type="text" placeholder="City, Country"></label>
+          <label>Links <input id="links" type="text" placeholder="linkedin.com/in/..., github.com/..."></label>
+        </div>
+      </div>
+
+      <div class="card" data-section-card="summary">
+        <h2>Summary</h2>
+        <textarea id="summary" rows="4" placeholder="Short professional summary..."></textarea>
+      </div>
+      <div class="card" data-section-card="experience">
+        <h2>Experience <button type="button" class="small add" data-add="experience">+ Add</button></h2>
+        <div id="experienceList" class="repeat-list"></div>
+      </div>
+      <div class="card" data-section-card="education">
+        <h2>Education <button type="button" class="small add" data-add="education">+ Add</button></h2>
+        <div id="educationList" class="repeat-list"></div>
+      </div>
+      <div class="card" data-section-card="projects">
+        <h2>Projects <button type="button" class="small add" data-add="projects">+ Add</button></h2>
+        <div id="projectsList" class="repeat-list"></div>
+      </div>
+      <div class="card" data-section-card="skills">
+        <h2>Skills</h2>
+        <textarea id="skills" rows="3" placeholder="Python, SQL, JavaScript, ... (comma or line separated)"></textarea>
+      </div>
+      <div class="card" data-section-card="achievements">
+        <h2>Achievements / Extras</h2>
+        <textarea id="achievements" rows="3" placeholder="Certifications, awards, activities..."></textarea>
+      </div>
+    </section>
+
+    <section class="preview-pane">
+      <div class="no-print hint center">Live A4 preview (scaled). Use Export PDF for print.</div>
+      <div id="pageWrap" class="page-wrap">
+        <div id="resumePage" class="resume template-classic" aria-label="Resume preview"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

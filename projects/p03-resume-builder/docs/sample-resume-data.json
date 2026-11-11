@@ -1,0 +1,73 @@
+{
+  "template": "classic",
+  "personal": {
+    "name": "Riya Sharma",
+    "title": "Software Intern",
+    "email": "riya@example.com",
+    "phone": "+91 90000 00000",
+    "location": "Pune, India",
+    "links": "linkedin.com/in/riya"
+  },
+  "summary": "Motivated engineering student with experience building web apps and tools.",
+  "experience": [
+    {
+      "id": "e1",
+      "role": "Intern",
+      "company": "Example Labs",
+      "date": "Jun 2025 - Aug 2025",
+      "details": "Built internal tools\nImproved page load performance"
+    }
+  ],
+  "education": [
+    {
+      "id": "ed1",
+      "degree": "B.Tech Computer Science",
+      "school": "ABC Institute of Technology",
+      "date": "2023 - 2027",
+      "details": "CGPA: 8.6"
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "name": "Form Photo Fixer",
+      "link": "",
+      "date": "2026",
+      "details": "Offline image crop/compress tool"
+    }
+  ],
+  "skills": "Python, JavaScript, SQL, HTML, CSS",
+  "achievements": "Hackathon finalist",
+  "sectionOrder": [
+    {
+      "id": "summary",
+      "label": "Summary",
+      "enabled": true
+    },
+    {
+      "id": "experience",
+      "label": "Experience",
+      "enabled": true
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "enabled": true
+    },
+    {
+      "id": "projects",
+      "label": "Projects",
+      "enabled": true
+    },
+    {
+      "id": "skills",
+      "label": "Skills",
+      "enabled": true
+    },
+    {
+      "id": "achievements",
+      "label": "Achievements",
+      "enabled": true
+    }
+  ]
+}

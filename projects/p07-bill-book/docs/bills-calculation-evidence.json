@@ -1,0 +1,143 @@
+[
+  {
+    "bill": 1,
+    "lines": [
+      {
+        "item": "Rice",
+        "qty": 2,
+        "price": 60,
+        "disc%": 0,
+        "tax%": 5,
+        "lineTotal": 126.0
+      },
+      {
+        "item": "Oil",
+        "qty": 1,
+        "price": 165,
+        "disc%": 0,
+        "tax%": 5,
+        "lineTotal": 173.25
+      }
+    ],
+    "subtotal": 285,
+    "discount": 0.0,
+    "tax": 14.25,
+    "grandTotal": 299.25
+  },
+  {
+    "bill": 2,
+    "lines": [
+      {
+        "item": "Sugar",
+        "qty": 1,
+        "price": 45,
+        "disc%": 10,
+        "tax%": 0,
+        "lineTotal": 40.5
+      },
+      {
+        "item": "Tea",
+        "qty": 2,
+        "price": 120,
+        "disc%": 5,
+        "tax%": 5,
+        "lineTotal": 239.4
+      }
+    ],
+    "subtotal": 285,
+    "discount": 16.5,
+    "tax": 11.4,
+    "grandTotal": 279.9
+  },
+  {
+    "bill": 3,
+    "lines": [
+      {
+        "item": "Soap",
+        "qty": 4,
+        "price": 35,
+        "disc%": 0,
+        "tax%": 12,
+        "lineTotal": 156.8
+      },
+      {
+        "item": "Shampoo",
+        "qty": 1,
+        "price": 180,
+        "disc%": 10,
+        "tax%": 18,
+        "lineTotal": 191.16
+      }
+    ],
+    "subtotal": 320,
+    "discount": 18.0,
+    "tax": 45.96,
+    "grandTotal": 347.96
+  },
+  {
+    "bill": 4,
+    "lines": [
+      {
+        "item": "Dal",
+        "qty": 3,
+        "price": 110,
+        "disc%": 5,
+        "tax%": 0,
+        "lineTotal": 313.5
+      },
+      {
+        "item": "Atta",
+        "qty": 2,
+        "price": 55,
+        "disc%": 0,
+        "tax%": 0,
+        "lineTotal": 110.0
+      },
+      {
+        "item": "Salt",
+        "qty": 1,
+        "price": 20,
+        "disc%": 0,
+        "tax%": 0,
+        "lineTotal": 20.0
+      }
+    ],
+    "subtotal": 460,
+    "discount": 16.5,
+    "tax": 0.0,
+    "grandTotal": 443.5
+  },
+  {
+    "bill": 5,
+    "lines": [
+      {
+        "item": "Milk",
+        "qty": 2,
+        "price": 54,
+        "disc%": 0,
+        "tax%": 0,
+        "lineTotal": 108.0
+      },
+      {
+        "item": "Bread",
+        "qty": 1,
+        "price": 40,
+        "disc%": 5,
+        "tax%": 0,
+        "lineTotal": 38.0
+      },
+      {
+        "item": "Eggs",
+        "qty": 1,
+        "price": 75,
+        "disc%": 0,
+        "tax%": 0,
+        "lineTotal": 75.0
+      }
+    ],
+    "subtotal": 223,
+    "discount": 2.0,
+    "tax": 0.0,
+    "grandTotal": 221.0
+  }
+]
